@@ -214,6 +214,32 @@ Copy/paste the table into the README file below this line.
 
 <!-- add the table here -->
 
+| timsort | merge_sorted | quick_sorted | 
+| ------- | ------------ | ------------ | 
+| 2.86e-06 | 1.74e-06 | 1.87e-06|
+| 1.92e-06 | 7.12e-06 | 8.71e-06|
+| 1.73e-06 | 1.11e-05 | 1.15e-05|
+| 2.48e-06 | 2.29e-05 | 2.40e-05|
+| 3.27e-06 | 4.74e-05 | 5.11e-05|
+| 5.25e-06 | 1.01e-04 | 1.15e-04|
+| 1.11e-05 | 2.26e-04 | 3.25e-04|
+| 2.20e-05 | 4.99e-04 | 6.34e-04|
+| 4.56e-05 | 1.11e-03 | 1.42e-03|
+| 9.97e-05 | 2.43e-03 | 3.08e-03|
+| 2.18e-04 | 5.30e-03 | 7.14e-03|
+| 4.79e-04 | 1.15e-02 | 1.46e-02|
+| 1.05e-03 | 2.52e-02 | 3.11e-02|
+| 2.28e-03 | 5.41e-02 | 7.25e-02|
+| 4.93e-03 | 9.45e-02 | 9.36e-02|
+| 6.66e-03 | 1.56e-01 | 1.95e-01|
+| 1.52e-02 | 3.39e-01 | 4.26e-01|
+| 3.28e-02 | 7.29e-01 | 8.87e-01|
+| 7.62e-02 | 1.55e+00 | 1.98e+00|
+| 1.71e-01 | 3.32e+00 | 4.22e+00|
+| 4.03e-01 | 7.17e+00 | 9.18e+00|
+| 9.22e-01 | 1.53e+01 | 2.07e+01|
+
+
 You should notice that the built-in `sorted` function ran much faster on this input,
 but your `merge_sorted` and `quick_sorted` functions have essentially the same runtimes.
 This is because TimSort is designed to not have to resort already sorted data,

@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#/usr/bin/python3
 '''
 A simple program for measuring the runtime of sorting algorithms.
 '''
@@ -20,6 +20,8 @@ if __name__ == '__main__':
     parser.add_argument('--input', choices=['sorted', 'random'], default='random')
     args = parser.parse_args()
 
+    print('| '+'timsort'+' | '+'merge_sorted'+' | '+'quick_sorted' +' | ')
+    print('| '+'-------'+' | '+'------------'+' | '+ '------------'+' | ')
     # perform the runtime tests
     for x in range(0, args.max_x+1):
 
@@ -36,16 +38,16 @@ if __name__ == '__main__':
             # and whenever the input list is sorted, timsort will run in time Theta(n) instead of Theta(n log n)
             #
             # your specific task is to make xs be a list of all numbers between 0 and 2**x
-            xs = FIXME
-
-            # HINT:
-            # use the range and list functions
+            xs = list(range(2**{x}))
+            #xs = FIXME
 
         # calculate the runtimes
-        runtimes = {}
+        runtimes = {} 
         runtimes['timsort'] = timeit.timeit(lambda: sorted(xs), number=1)
         runtimes['merge_sorted'] = timeit.timeit(lambda: merge_sorted(xs), number=1)
         runtimes['quick_sorted'] = timeit.timeit(lambda: quick_sorted(xs), number=1)
+
+
 
 
         # display the runtimes
@@ -55,8 +57,4 @@ if __name__ == '__main__':
         # You will have to look up how to do this formatting.
         # In order to get a proper markdown table,
         # you will have to also print a header line somewhere else.
-        print(f'len(xs)=2**{x} runtimes={runtimes}')
-
-        # HINT:
-        # use f-strings and a print statement that looks something like
-        # print(f"| {runtimes['timsort']:0.2e} ")
+        print(f"| {runtimes['timsort']:0.2e} | {runtimes['merge_sorted']:0.2e} | {runtimes['quick_sorted']:0.2e}|")
