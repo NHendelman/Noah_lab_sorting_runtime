@@ -20,8 +20,8 @@ if __name__ == '__main__':
     parser.add_argument('--input', choices=['sorted', 'random'], default='random')
     args = parser.parse_args()
 
-    print('| '+'timsort'+' | '+'merge_sorted'+' | '+'quick_sorted' +' | ')
-    print('| '+'-------'+' | '+'------------'+' | '+ '------------'+' | ')
+    print('| ' + 'timsort' + ' | ' + 'merge_sorted' + ' | ' + 'quick_sorted' + ' | ')
+    print('| ' + '-------' + ' | ' + '------------' + ' | ' + '------------' + ' | ')
     # perform the runtime tests
     for x in range(0, args.max_x+1):
 
